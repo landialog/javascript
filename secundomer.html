@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="sec" style="text-align:center; font-size: 60px; color:red"></div>
+
+
+
+
+
+<script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+var sec = document.getElementById('sec');
+
+function watch() {
+    var secundomer = sec.innerText * 1;
+    secundomer++;
+    sec.innerText = secundomer;
+}
+setInterval(watch, 1000);
+
+
+
+
+
+
+
+/*
+
+    function sec(){
+        var sec = document.getElementById('sec');
+        var val = sec.innerText;
+        val--;
+        sec.innerText = val;
+        if (val == 0) {
+            alert("Все");
+        }
+    }
+setInterval(sec, 1000);
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

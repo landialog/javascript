@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Обратный отсчет</title>
+</head>
+<style>
+    #time,.back{
+        text-align:center; font-size: 60px; color:red;
+    }
+</style>
+
+<body>
+
+<p class="back">Обратный отсчет</p>
+
+<div id="time" >100</div>
+
+<script>
+
+function sec(){
+var sec = document.getElementById('time');
+var val = sec.innerText;
+val--;
+sec.innerText = val;
+if (val == 0) {
+alert("Стоп");
+}
+}
+
+setInterval(sec, 1000);
+
+
+</script>
+
+</body>
+</html>

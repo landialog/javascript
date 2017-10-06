@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .until{
+            text-align: center;
+            font-size: 45px;
+        }
+        #sec{
+            font-size: 45px;
+            color: red;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+<p class="until">До моего дня рождения осталось в секундах</p>
+<div id="sec"></div>
+
+<script>
+    setInterval(timer, 1000);
+    function timer() {
+        var endDate = new Date(2017, 12, 22, 12, 59); // birthday
+        var currentDate = new Date(); // currentDate
+        var seconds = Math.round((endDate - currentDate) / 1000);
+        var se = document.getElementById('sec');
+        se.innerHTML= seconds;
+        if (seconds == 0){
+            alert('День рождения наступил');
+        }
+    }
+</script>
+</body>
+</html>

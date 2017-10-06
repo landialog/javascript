@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<!--<div style="font-size: 100px;" id="sec">
+    10
+</div>-->
+
+
+
+<script>
+
+
+    //Текущая дата
+    var todayDate = new Date();
+
+    //Выбранная дата
+    var currentDate = new Date(2017, 12, 22, 12, 59, 59);
+
+    //Разница во времени
+    var dateDifference = currentDate.getTime() - todayDate.getTime();
+
+    //Дата, созданная из остатка времени
+    var remainsDate = new Date(dateDifference);
+
+    /*
+     * Переменные, отражающие остаток времени в нужном формате
+     * Благодарю Sleepwalker'а за код
+     */
+    var remainsSec = (parseInt(remainsDate / 1000));
+    var remainsFullDays = (parseInt(remainsSec / (24 * 60 * 60)));
+    var secInLastDay = remainsSec - remainsFullDays * 24 * 3600;
+    var remainsFullHours = (parseInt(secInLastDay / 3600));
+    var secInLastHour = secInLastDay - remainsFullHours * 3600;
+    var remainsMinutes = (parseInt(secInLastHour / 60));
+    var lastSec = secInLastHour - remainsMinutes * 60;
+
+    document.write('Сегодня:' + todayDate + '<br/>');
+    document.write('Осталось дней:' + remainsDate);
+
+    //setInterval(sec, 1000);
+    /*
+        var date = new Date(2001, 23, 01);
+        document.write(date.getFullYear());*/
+
+    /*var birthday = new Date(2017, 12, 22, 6, 00, 00);
+    document.write(date.getSeconds());*/
+
+    //setInterval(sec, 1000);
+    /*var date = new Date();
+    document.write = date.getFullYear()+'-'+date.getMonth()+'-'+date.getDate());
+*/
+
+
+
+
+/*
+    function sec(){
+        var sec = document.getElementById('sec');
+        var val = sec.innerText;
+        val--;
+        sec.innerText = val;
+
+        if (val == 0) {
+          alert('Мой день рождения')
+        }
+
+    }*/
+
+    //setInterval(sec, 1000);
+/*
+    //передвижение при наведении
+    var circle = document.querySelector(".circle");
+
+    circle.onmouseover = function(){
+        var style = getComputedStyle(circle);
+        circle.style.top = parseInt(style.top) + 5 + 'px';
+    }*/
+
+   /* circle.onclick = function(){
+        var style = getComputedStyle(circle);
+        circle.style.left = parseInt(style.left) + 60 + 'px';
+    }*/
+
+
+
+    /*document.body.onkeypress = function(){
+        var style = getComputedStyle(circle);
+        circle.style.left = parseInt(style.left) - 60 + 'px';
+    }
+*/
+
+    /* timeend= new Date();
+     // IE и FF по разному отрабатывают getYear()
+     timeend= new Date(timeend.getYear()>1900?(timeend.getYear()+1):(timeend.getYear()+1901),0,1);
+     // для задания обратного отсчета до определенной даты укажите дату в формате:
+     // timeend= new Date(ГОД, МЕСЯЦ-1, ДЕНЬ);
+     // Для задания даты с точностью до времени укажите дату в формате:
+     // timeend= new Date(ГОД, МЕСЯЦ-1, ДЕНЬ, ЧАСЫ-1, МИНУТЫ);
+     function time() {
+         today = new Date();
+         today = Math.floor((timeend-today)/1000);
+         tsec=today%60; today=Math.floor(today/60); if(tsec<10)tsec='0'+tsec;
+         tmin=today%60; today=Math.floor(today/60); if(tmin<10)tmin='0'+tmin;
+         thour=today%24; today=Math.floor(today/24);
+         timestr=today +" дней "+ thour+" часов "+tmin+" минут "+tsec+" секунд";
+         document.getElementById('t').innerHTML=timestr;
+         window.setTimeout("time()",1000);
+     }*/
+</script>
+
+
+
+</body>
+</html>
